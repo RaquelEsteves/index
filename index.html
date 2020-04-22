@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+      <head>
+            <title>CRC QUINTA DOS LOMBOS</title>
+            <meta name="description" content="FUTSALFEMININO">
+            <meta name="keywords" content="HTML,CSS,XML,JavaScript, Carcavelos, Quinta dos Lombos">
+            <meta name="author" content="Raquel Esteves">
+            <meta http-equiv="refresh" content="30">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="css\style.css">
+      </head>
+
+      <body>
+        <header>
+          <a id="menu_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z" fill="white"/>
+          </svg>
+          </a>
+          <nav id="drawer">
+          <a href="#unordered"> Sobre nós </a>
+          <a href="#ordered"> Escalões</a>
+          <a href="#color"> Imagens</a>
+          <a href="#video"> Videos </a>
+          <a href="#table"> Tabela</a>
+          </nav>
+
+            <h1>Gostas de jogar à bola?</h1>
+            <h2> Tens entre 9 e 14 anos ? </h2>
+            <p> VEM TREINAR CONNOSCO! </p>
+        </header>
+
+        <nav id="tabletPC" class="col-3">
+            <a href="#unordered"> Sobre nós </a>
+          </br>
+            <a href="#ordered"> Escalões</a>
+            </br>
+            <a href="#color"> Imagens</a>
+            </br>
+            <a href="#video"> Videos </a>
+            </br>
+            <a href="#table"> Tabela</a>
+        </nav>
+
+        <div id="container" class="col-9">
+          <section class="slideshow-container">
+            <h2>HTML Slideshow</h2>
+
+            <article class="mySlides" class="fade">
+            <figure>
+            <img src="imagens/4.jpg">
+            <figcaption>Figure 1: Garra, Força e Dedicação, antes do jogo!</figcaption>
+            </figure>
+            </article>
+
+            <article class="mySlides" class="fade">
+              <figure>
+              <img src="imagens/2.jpg">
+              <figcaption> Figure 2: Convívio final.</figcaption>
+              </figure>
+              </article>
+
+              <article class="mySlides" class="fade">
+                <figure>
+                <img src="imagens/5.jpg">
+                <figcaption> Figure 3: Início do jogo.</figcaption>
+                </figure>
+                </article>
+
+
+              <div class="dotpoints">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </section>
+
+        <section>
+          <a name="unordered">
+            <h2> CRC QUINTA DOS LOMBOS </h2>
+                <h2>FUTSALFEMININO</h2>
+                   <ul>
+                        <li> Escalões de Formação, </li>
+                        <li> Séniores | Campeonato Nacional.</li>
+                   </ul>
+          </section>
+
+          <section>
+            <a name="ordered">
+            <h2> APOIE O FUTSAL FEMININO </h2>
+                <h2>  Agora sim damos a volta a isto! </h2>
+                   <ol>
+                       <li><u> Jogo das Raparigas</u></li>
+                       <li><u> ÉS MUITO FORTE, por isso, sonha, luta, vence! </u></li>
+                   </ol>
+          </section>
+
+          <section>
+           <h2>Não fiques fora de jogo!</h2>
+                   <img src="https://tenor.com/view/futsal-womens-futsal-goal-free-kick-nice-shot-gif-12719924.gif"  width="800" height="auto">
+                 </br>
+                   <img src="imagens/16391_imgbank.png" width="300" height="auto">
+          </section>
+
+          <section>
+                   <a name="video">
+                     <h2> Video </h2>
+                     <p> Um pequeno video sobre ser Lombita</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1QixoLTv2AU"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                      </iframe>
+          </section>
+          <section>
+                   <a name="table">
+                     <h2>INFORMAÇÕES</h2>
+                     <h2> CRC QUINTA DOS LOMBOS </h2>
+                   <table border="1px">
+                                       <th colspan="3"> Treinos </th>
+                                   <tr>
+                                       <td> Dias </td> <td> Horários </td> <td> Pavilhão </td>
+                                  </tr>
+                                  <tr>
+                                      <td rowspan="4"> 3as Feiras e 6as Feiras</td>
+                                      <td rowspan="3"> 20h30 às 22h </td>
+                                      <td> PAVILHÃO DESPORTIVO DOS LOMBOS, Carcavelos </td>
+                                 </tr>
+                 </table>
+               </section>
+               </div>
+               <aside class="col-2">
+                 <h3>Para mais informações</h3>
+                 <p>crcql@crcql.org.pt</p>
+               </aside>
+
+               <footer>
+                 <h2> Desenvolved by Raquel Esteves</h2>
+               </footer>
+
+               <script>
+
+                let slideIndex = 0;
+                showSlides();
+                function showSlides() {
+                let i = null;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+                slideIndex++;
+                if (slideIndex> slides.length) {slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+             slides[slideIndex-1].style.display = "block";
+             dots[slideIndex-1].className += " active";
+             setTimeout(showSlides, 3000); // Change image every 3 seconds
+            }
+            let menu_icon = document.querySelector ("#menu_icon");
+            let container = document.querySelector("#container");
+            let drawer = document.querySelector("#drawer");
+            menu_icon.addEventListener("click", function (e) {
+            drawer.classList.toggle("open");
+            e.stopPropagation();
+          });
+            container.addEventListener("click", function () {
+            drawer.classList.remove("open");
+          });
+
+               </script>
+
+                </body>
+
+             </html>
